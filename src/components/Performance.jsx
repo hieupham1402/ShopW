@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { performanceImages, performanceImgPositions } from "../constants/index.js";
-import {useMediaQuery} from "react-responsive";
+import { useMediaQuery } from "react-responsive";
 
 const Performance = () => {
     const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
@@ -13,7 +13,6 @@ const Performance = () => {
             const sectionEl = sectionRef.current;
             if (!sectionEl) return;
 
-            // Text Animation
             gsap.fromTo(
                 ".content p",
                 { opacity: 0, y: 10 },
@@ -33,7 +32,6 @@ const Performance = () => {
 
             if (isMobile) return;
 
-            // Image Positioning Timeline
             const tl = gsap.timeline({
                 defaults: { duration: 2, ease: "power1.inOut", overwrite: "auto" },
                 scrollTrigger: {
@@ -45,7 +43,6 @@ const Performance = () => {
                 },
             });
 
-            // Position Each Performance Image
             performanceImgPositions.forEach((item) => {
                 if (item.id === "p5") return;
 
@@ -55,7 +52,6 @@ const Performance = () => {
                 if (typeof item.left === "number") vars.left = `${item.left}%`;
                 if (typeof item.right === "number") vars.right = `${item.right}%`;
                 if (typeof item.bottom === "number") vars.bottom = `${item.bottom}%`;
-
                 if (item.transform) vars.transform = item.transform;
 
                 tl.to(selector, vars, 0);
@@ -66,29 +62,33 @@ const Performance = () => {
 
     return (
         <section id="performance" ref={sectionRef}>
-            <h2>Dreams Market Crypto Games</h2>
+            <h2>Kush Lounge Cannabis Festival</h2>
 
-             <div className="wrapper">
+            <div className="wrapper">
                 {performanceImages.map((item, index) => (
                     <img
                         key={index}
                         src={item.src}
                         className={item.id}
-                        alt={item.alt || `Performance Image #${index + 1}`}
+                        alt={item.alt || `Kush festival visual #${index + 1}`}
                     />
                 ))}
-             </div>
+            </div>
 
             <div className="content">
                 <p>
-                    Step into a world where {" "}
+                    Welcome to Kush Lounge, where{" "}
                     <span className="text-white">
-            ancient secrets meet blockchain technology
-          </span>
-                    . In Dreams Market, you play as a skilled operative navigating the shadows of the crypto underworld. Complete missions, eliminate targets, and uncover hidden treasures that translate to real Solana rewards.
+                        cannabis culture, creativity, and community come together
+                    </span>
+                    . Explore premium strain visuals, slow smoke moments, and the
+                    relaxed spirit of 420.
                 </p>
+
                 <p>
-                    Each successful mission earns you exclusive NFTs, rare collectibles, and crypto rewards. Master the art of strategic trading, execute perfect trades, and rise through the ranks to unlock legendary supercars and premium assets. The blockchain is your weapon, Solana is your playground.
+                    Enjoy fresh drops, kush-inspired artwork, educational strain notes,
+                    and a vibrant atmosphere shaped by freedom, art, and self-expression.
+                    This is a celebration of the culture that brings people together.
                 </p>
             </div>
         </section>

@@ -27,45 +27,45 @@ const Showcase = () => {
     return (
         <section id="showcase">
             <div className="media">
-                <video src="/videos/game.mp4" loop muted autoPlay playsInline />
+                <video src="/videos/Rolling.mp4" loop muted autoPlay playsInline />
                 <div className="mask">
-                    <img src="/mask-logo3.svg" />
+                    <img src="/hieupm2-Photoroom.png" />
                 </div>
             </div>
 
             <div className="content">
                 <div className="wrapper">
                     <div className="lg:max-lg">
-                        <h2>Dreams Market on Solana</h2>
+                        <h2>Kush Lounge in Motion</h2>
 
                         <div className="space-y-5 mt-7 pe-10">
                             <p>
                                 Powered by {" "}
                                 <span className="text-white">
-                                    Solana's high-performance blockchain
+                                    slow smoke, premium strain visuals
                                 </span>
-                                , Dreams Market delivers
+                                , Kush Lounge delivers
                             </p>
                             <p>
-                                Lightning-fast transactions with near-zero fees. Dreams Market lets you trade, stake, and earn rewards on the most efficient blockchain network in crypto.
+                                A dark, cinematic cannabis world with looping video, bold green accents, and relaxed 420 atmosphere.
                             </p>
                             <p>
-                                Dreams Market combines cutting-edge DeFi technology with gamified rewards, making trading both profitable and exciting. Win exclusive prizes including supercars, NFTs, and more.
+                                Every scene is tuned around kush culture: curated drops, smoke-heavy motion, premium product energy, and a community-first lounge feeling.
                             </p>
-                            <p className="text-primary">Explore Dreams Market trading platform</p>
+                            <p className="text-primary">Explore the Kush Lounge experience</p>
                         </div>
                     </div>
 
                     <div className="max-w-3xs space-y-14">
                         <div className="space-y-2">
-                            <p>Up to</p>
-                            <h3>65,000 TPS</h3>
-                            <p>transaction speed on Solana</p>
+                            <p>Curated</p>
+                            <h3>420</h3>
+                            <p>visual mood and session energy</p>
                         </div>
                         <div className="space-y-2">
-                            <p>Near</p>
-                            <h3>$0.00025</h3>
-                            <p>average transaction fee</p>
+                            <p>Fresh</p>
+                            <h3>12+</h3>
+                            <p>weekly kush drops and edits</p>
                         </div>
                     </div>
                 </div>

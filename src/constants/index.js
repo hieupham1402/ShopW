@@ -1,10 +1,10 @@
 const navLinks = [
-    { label: "Trade", href: "#drive" },
-    { label: "Rewards", href: "#highlights" },
-    { label: "NFTs", href: "#nft-collection" },
-    { label: "Staking", href: "#waitlist" },
-    { label: "About", href: "#performance" },
-    { label: "Docs", href: "#features" },
+    { label: "Lounge", href: "#drive" },
+    { label: "Gallery", href: "#highlights" },
+    { label: "420 Art", href: "#nft-collection" },
+    { label: "Drops", href: "#waitlist" },
+    { label: "Culture", href: "#performance" },
+    { label: "Kush", href: "#features" },
 ];
 
 const noChangeParts = [
@@ -27,13 +27,13 @@ const noChangeParts = [
 ];
 
 const performanceImages = [
-    { id: "p1", src: "/performance1.png" },
-    { id: "p2", src: "/performance2.png" },
-    { id: "p3", src: "/performance3.png" },
-    { id: "p4", src: "/performance4.png" },
-    { id: "p5", src: "/performance5.jpg" },
-    { id: "p6", src: "/performance6.png" },
-    { id: "p7", src: "/performance7.png" },
+    { id: "p1", src: "/Weed5.jpg" },
+    { id: "p2", src: "/Weed8.jpg" },
+    { id: "p3", src: "/Weed3.jpg" },
+    { id: "p4", src: "/Weed4.jpg" },
+    { id: "p5", src: "/Weed1.jpg" },
+    { id: "p6", src: "/Weed6.jpg" },
+    { id: "p7", src: "/Weed7.jpg" },
 ];
 
 const performanceImgPositions = [
@@ -78,36 +78,36 @@ const features = [
     {
         id: 1,
         icon: "/feature-icon1.svg",
-        highlight: "Fast Trading.",
-        text: "Dreams Market executes trades instantly on Solana's lightning-fast blockchain with minimal fees.",
+        highlight: "Premium Kush.",
+        text: "Curated strain visuals, rich smoke texture, and a mellow 420 atmosphere.",
         styles: "left-5 md:left-20 top-[20%] opacity-0 translate-y-5",
     },
     {
         id: 2,
         icon: "/feature-icon2.svg",
-        highlight: "Earn Rewards.",
-        text: "Win exclusive supercars and premium prizes on Dreams Market by successfully completing trades and challenges.",
+        highlight: "Fresh Drops.",
+        text: "Limited cannabis-inspired releases with rotating visuals and lounge-ready energy.",
         styles: "right-5 md:right-20 top-[30%] opacity-0 translate-y-5",
     },
     {
         id: 3,
         icon: "/feature-icon3.svg",
-        highlight: "NFT Collection.",
-        text: "Own unique Dreams Market NFTs that unlock special privileges and rewards in our ecosystem.",
+        highlight: "Visual Culture.",
+        text: "A smoky neon world built around kush, community, and relaxed creative sessions.",
         styles: "left-5 md:left-20 top-[50%] opacity-0 translate-y-5",
     },
     {
         id: 4,
         icon: "/feature-icon4.svg",
-        highlight: "Staking Rewards.",
-        text: "Stake your Dreams Market tokens and earn passive income with competitive APY rates on Solana.",
+        highlight: "420 Lounge.",
+        text: "Ambient motion, slow-roll videos, and premium cannabis styling for the whole page.",
         styles: "right-5 md:right-20 top-[70%] opacity-0 translate-y-5",
     },
     {
         id: 5,
         icon: "/feature-icon5.svg",
-        highlight: "Secure Platform.",
-        text: "Dreams Market is built on Solana's secure blockchain with smart contract audits and transparent operations.",
+        highlight: "Clean Identity.",
+        text: "Dark surfaces, green accents, and bold kush messaging across every section.",
         styles: "left-5 md:left-20 top-[90%] opacity-0 translate-y-5",
     },
 ];
@@ -123,7 +123,7 @@ const featureSequence = [
 const footerLinks = [
     { label: "Privacy Policy", link: "#" },
     { label: "Terms of Use", link: "#" },
-    { label: "Sales Policy", link: "#" },
+    { label: "Drop Policy", link: "#" },
     { label: "Legal", link: "#" },
     { label: "Site Map", link: "#" },
 ];

@@ -1,17 +1,17 @@
 // CSS is loaded via public folder
 
 const Animated3DSection = () => {
-  const dragon1 = '/3d-images/dragon_1.jpg';
-  const dragon2 = '/3d-images/dragon_2.jpg';
-  const dragon3 = '/3d-images/dragon_3.jpg';
-  const dragon4 = '/3d-images/dragon_4.jpg';
-  const dragon5 = '/3d-images/dragon_5.jpg';
-  const dragon6 = '/3d-images/dragon_6.jpg';
-  const dragon7 = '/3d-images/dragon_7.jpg';
-  const dragon8 = '/3d-images/dragon_8.jpg';
-  const dragon9 = '/3d-images/dragon_9.jpg';
-  const dragon10 = '/3d-images/dragon_10.jpg';
-  const modelImg = '/3d-images/model.png';
+  const dragon1 = '/3d-images/w1.png';
+  const dragon2 = '/3d-images/w2.png';
+  const dragon3 = '/3d-images/w3.png';
+  const dragon4 = '/3d-images/w4.png';
+  const dragon5 = '/3d-images/w5.png';
+  const dragon6 = '/3d-images/w6.png';
+  const dragon7 = '/3d-images/w7.png';
+  const dragon8 = '/3d-images/w11.png';
+  const dragon9 = '/3d-images/w9.png';
+  const dragon10 = '/3d-images/w10.png';
+  const modelImg = '/3d-images/hinhtrongsuotRobot.png';
   return (
     <section id="nft-collection" className="banner" style={{
       backgroundColor: '#d2d2d2',
@@ -60,15 +60,18 @@ const Animated3DSection = () => {
           <img src={dragon10} alt="" />
         </div>
       </div>
-      
+
       <div className="content">
-        <h1 data-content="NFT COLLECTION">NFT</h1>
+        <h1 data-content="420 FESTIVAL">420</h1>
         <div className="author">
           <h2>DREAMS MARKET</h2>
-          <p><b>NFT Collection</b></p>
-          <p>Own exclusive Dreams Market NFTs that unlock special rewards and privileges</p>
+          <p><b>Cannabis Festival</b></p>
+          <p>Join the celebration with music, art, community, and 420 culture.</p>
         </div>
-        <div className="model" style={{ backgroundImage: `url(${modelImg})` }}></div>
+        <div
+          className="model"
+          style={{ backgroundImage: `url(${modelImg})` }}
+        ></div>
       </div>
     </section>
   );

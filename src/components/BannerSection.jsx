@@ -6,7 +6,7 @@ const BannerSection = () => {
         width: '100%',
         height: '50vh',
         minHeight: '400px',
-        backgroundImage: 'url(/Banner.png)',
+        backgroundImage: 'url(/Banner2.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -34,7 +34,7 @@ const BannerSection = () => {
           fontWeight: 'bold',
           marginBottom: '1rem'
         }}>
-          Dreams Market
+          Kush Lounge
         </h2>
         <p style={{ 
           color: 'rgba(255, 255, 255, 0.9)', 
@@ -42,7 +42,7 @@ const BannerSection = () => {
           maxWidth: '800px',
           margin: '0 auto'
         }}>
-          Where Trading Dreams Become Reality on Solana
+          Premium smoke visuals, curated strains, and 420 culture in motion
         </p>
       </div>
     </section>

@@ -1,15 +1,15 @@
 import { useCallback, useRef } from "react";
 
 const highlightShots = [
-  { label: "Spectre Mode", badge: "HDR 4K" },
-  { label: "Garage Freecam", badge: "Unlocked" },
-  { label: "Prize Vault Overlay", badge: "Live feed" },
+  { label: "Kush Mode", badge: "HDR 4K" },
+  { label: "Smoke Room", badge: "Unlocked" },
+  { label: "Strain Overlay", badge: "Live feed" },
 ];
 
 const telemetry = [
   { label: "Session depth", value: "18 min" },
-  { label: "Vehicles awarded", value: "12+ weekly" },
-  { label: "Reward pool", value: "$2.5M" },
+  { label: "Fresh drops", value: "12+ weekly" },
+  { label: "420 mood", value: "High" },
 ];
 
 const CarLandingSection = () => {
@@ -38,12 +38,12 @@ const CarLandingSection = () => {
             <span className="dot" />
             Immersive preview
           </span>
-          <h2>Dreams Market prize garage in hyperreal clarity.</h2>
+          <h2>Kush Lounge rendered in hyperreal smoke.</h2>
           <p>
-            Explore the Solana-fueled reward studio rendered with cinematic
-            lighting, volumetric fog, and live telemetry overlays. Toggle
-            between hero shots, inspect prize vehicles, and watch on-chain
-            events ripple across the scene in real time.
+            Explore a cannabis-focused visual lounge with cinematic lighting,
+            slow smoke, neon green accents, and premium strain energy. Toggle
+            between hero shots, inspect the kush carousel, and let the whole
+            scene breathe in a relaxed 420 rhythm.
           </p>
 
           <div className="immersive-stage__chips">
@@ -56,17 +56,17 @@ const CarLandingSection = () => {
           </div>
 
           <ul className="immersive-stage__list">
-            <li>Multi-camera orbit paths tuned for desktop, mobile, and VR.</li>
-            <li>Animated HUD reveals trading tiers, prize odds, and NFT drops.</li>
-            <li>Material palette calibrated for OLED and high-nit displays.</li>
+            <li>Multi-camera smoke shots tuned for desktop and mobile.</li>
+            <li>Animated overlays highlight strains, drops, and lounge moments.</li>
+            <li>Dark palette calibrated with kush green accents and soft fog.</li>
           </ul>
 
           <div className="immersive-stage__actions">
             <button className="connect-wallet-btn" type="button" onClick={handleCarouselFocus}>
-              <span>View reward carousel</span>
+              <span>View strain carousel</span>
             </button>
             <button className="ghost-button" type="button" onClick={handleOpenStandalone}>
-              Launch full experience
+              Launch full lounge
             </button>
           </div>
         </div>
@@ -77,7 +77,7 @@ const CarLandingSection = () => {
             <iframe
               ref={iframeRef}
               src="/car-landing.html"
-              title="Dreams Market immersive preview"
+              title="Kush Lounge immersive preview"
               scrolling="no"
               loading="lazy"
             />

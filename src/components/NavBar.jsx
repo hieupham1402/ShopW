@@ -4,7 +4,7 @@ const NavBar = () => {
   return (
     <header>
       <nav>
-        <img src="/logo.png" alt="Dreams Market logo" />
+        <img src="/hieupm2-Photoroom.png" alt="Kush Lounge logo" />
 
         <ul>
           {navLinks.map(({ label, href }) => (
@@ -16,7 +16,7 @@ const NavBar = () => {
 
         <div className="flex-center gap-3">
           <button className="connect-wallet-btn">
-            <span>Connect Wallet</span>
+            <span>Enter Lounge</span>
           </button>
         </div>
       </nav>

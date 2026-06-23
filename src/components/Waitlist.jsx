@@ -67,8 +67,8 @@ const Waitlist = () => {
   return (
     <section ref={sectionRef} id="waitlist" className="waitlist-section">
       <div className="waitlist-container">
-        <h2 className="waitlist-title">Join the Dreams Market Waitlist</h2>
-        <p className="waitlist-subtitle">Be among the first to trade, earn, and win on Dreams Market</p>
+        <h2 className="waitlist-title">Join the Kush Lounge Drop List</h2>
+        <p className="waitlist-subtitle">Get first access to fresh strain drops, smoke edits, and 420 lounge updates</p>
 
         {!submitted ? (
           <form ref={formRef} onSubmit={handleSubmit} className="waitlist-form">
@@ -86,7 +86,7 @@ const Waitlist = () => {
               {isLoading ? (
                 <span className="loading-spinner"></span>
               ) : (
-                'Join Waitlist'
+                'Join Drop List'
               )}
             </button>
           </form>
@@ -103,8 +103,8 @@ const Waitlist = () => {
                 />
               </svg>
             </div>
-            <h3>You're on the list!</h3>
-            <p>We'll notify you when we launch.</p>
+            <h3>You're in the lounge!</h3>
+            <p>We'll send the next kush drop straight to you.</p>
           </div>
         )}
       </div>

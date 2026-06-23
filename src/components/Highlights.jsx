@@ -2,6 +2,25 @@ import {useMediaQuery} from "react-responsive";
 import {useGSAP} from "@gsap/react";
 import gsap from "gsap";
 
+const highlightVideos = [
+    "/videos/smoke1.mp4",
+    "/videos/smoke2.mp4",
+    "/videos/smoke3.mp4",
+    "/videos/smoke5.mp4",
+];
+
+const HighlightVideo = ({ src, label }) => (
+    <video
+        src={src}
+        aria-label={label}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+    />
+);
+
 const Highlights = () => {
     const isMobile = useMediaQuery({  query: '(max-width: 1024px)' });
 
@@ -21,35 +40,30 @@ const Highlights = () => {
 
     return (
         <section id="highlights">
-            <h2>Join Dreams Market: The Revolution in Crypto Trading.</h2>
-            <h3>Here's what makes Dreams Market unique.</h3>
+            <h2>Enter the Kush Lounge.</h2>
+            {/* <h3>Drop your own .mp4 clips into the cannabis highlight wall.</h3> */}
 
             <div className="masonry">
                 <div className="left-column">
-                    <div>
-                        <img src="/laptop.png" alt="Trading" />
-                        <p>Trade with lightning speed on Dreams Market with minimal fees on Solana.</p>
+                    <div className="highlight-video-card large">
+                        <HighlightVideo src={highlightVideos[0]} label="Premium cannabis atmosphere video" />
+                        <p>Premium strain visuals with slow smoke, rich color, and 420 energy.</p>
                     </div>
-                    <div>
-                        <img src="/sun.png" alt="Rewards" />
-                        <p>Win exclusive <br />
-                            supercars on <br/>
-                            Dreams Market.</p>
+                    <div className="highlight-video-card compact">
+                        <HighlightVideo src={highlightVideos[1]} label="Cannabis lounge video" />
+                        <p>Fresh drops, limited kush batches, and relaxed community perks.</p>
                     </div>
                 </div>
                 <div className="right-column">
-                    <div className="apple-gradient">
-                        <img src="/ai.png" alt="NFT" />
-                        <p>Own Dreams Market <br />
-                            <span>NFT collectibles.</span></p>
+                    <div className="highlight-video-card compact apple-gradient">
+                        <HighlightVideo src={highlightVideos[2]} label="Cannabis collectibles video" />
+                        <p>Build a visual identity around <span>weed culture.</span></p>
                     </div>
-                    <div>
-                        <img src="/battery.png" alt="Staking" />
-                        <p>Earn up to
-                            <span className="green-gradient">{' '}25% APY{' '}</span>
-                            staking on Dreams Market.
-                            <span className="text-dark-100">{' '}(Passive income rewards.)
-                            </span></p>
+                    <div className="highlight-video-card large">
+                        <HighlightVideo src={highlightVideos[3]} label="420 lounge video" />
+                        <p>Turn every section into a
+                            <span className="green-gradient">{' '}420 lounge{' '}</span>
+                            with motion-first product storytelling.</p>
                     </div>
                 </div>
             </div>

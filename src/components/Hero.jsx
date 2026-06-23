@@ -10,11 +10,18 @@ const Hero = () => {
     return (
         <section id="hero">
             <div>
-                <h1>Welcome to Dreams Market</h1>
-                <p>Where Trading Dreams Become Reality on Solana</p>
+                <h1>SMOKE WEED</h1>
+                <p>Premium Kush visuals, slow smoke, and 420 lounge energy</p>
             </div>
 
-            <video ref={videoRef} src="/videos/hero.mp4" autoPlay muted playsInline />
+            <video
+                ref={videoRef}
+                src="/videos/smokeWeed10.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+            />
         </section>
     )
 }
