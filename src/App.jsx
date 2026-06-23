@@ -3,7 +3,6 @@ import CarLandingSection from "./components/CarLandingSection.jsx";
 import BannerSection from "./components/BannerSection.jsx";
 import Hero from "./components/Hero.jsx";
 import Animated3DSection from "./components/Animated3DSection.jsx";
-import ProductViewer from "./components/ProductViewer.jsx";
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/all";
 import Showcase from "./components/Showcase.jsx";

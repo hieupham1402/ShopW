@@ -1,6 +1,8 @@
 import {useMediaQuery} from "react-responsive";
 import {useGSAP} from "@gsap/react";
 import gsap from "gsap";
+import {useRef} from "react";
+import useViewportVideo from "../hooks/useViewportVideo.js";
 
 const highlightVideos = [
     "/videos/smoke1.mp4",
@@ -9,17 +11,23 @@ const highlightVideos = [
     "/videos/smoke5.mp4",
 ];
 
-const HighlightVideo = ({ src, label }) => (
-    <video
-        src={src}
-        aria-label={label}
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-    />
-);
+const HighlightVideo = ({ src, label }) => {
+    const videoRef = useRef(null);
+    useViewportVideo(videoRef, { threshold: 0.12, rootMargin: "160px" });
+
+    return (
+        <video
+            ref={videoRef}
+            src={src}
+            aria-label={label}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+        />
+    );
+};
 
 const Highlights = () => {
     const isMobile = useMediaQuery({  query: '(max-width: 1024px)' });

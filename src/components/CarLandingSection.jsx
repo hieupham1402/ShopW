@@ -1,4 +1,4 @@
-import { useCallback, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const highlightShots = [
   { label: "Kush Mode", badge: "HDR 4K" },
@@ -14,6 +14,32 @@ const telemetry = [
 
 const CarLandingSection = () => {
   const iframeRef = useRef(null);
+  const frameHostRef = useRef(null);
+  const [shouldLoadIframe, setShouldLoadIframe] = useState(false);
+
+  useEffect(() => {
+    const frameHost = frameHostRef.current;
+    if (!frameHost || shouldLoadIframe) return;
+
+    if (typeof IntersectionObserver === "undefined") {
+      setShouldLoadIframe(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldLoadIframe(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "500px", threshold: 0.01 }
+    );
+
+    observer.observe(frameHost);
+
+    return () => observer.disconnect();
+  }, [shouldLoadIframe]);
 
   const sendMessage = useCallback((type) => {
     const iframeWindow = iframeRef.current?.contentWindow;
@@ -23,6 +49,7 @@ const CarLandingSection = () => {
   }, []);
 
   const handleCarouselFocus = useCallback(() => {
+    setShouldLoadIframe(true);
     sendMessage("FOCUS_CAROUSEL");
   }, [sendMessage]);
 
@@ -73,14 +100,16 @@ const CarLandingSection = () => {
 
         <div className="immersive-stage__media">
           <div className="immersive-stage__glow" />
-          <div className="immersive-stage__frame">
-            <iframe
-              ref={iframeRef}
-              src="/car-landing.html"
-              title="Kush Lounge immersive preview"
-              scrolling="no"
-              loading="lazy"
-            />
+          <div className="immersive-stage__frame" ref={frameHostRef}>
+            {shouldLoadIframe && (
+              <iframe
+                ref={iframeRef}
+                src="/car-landing.html"
+                title="Kush Lounge immersive preview"
+                scrolling="no"
+                loading="lazy"
+              />
+            )}
           </div>
           <div className="immersive-stage__metrics">
             {telemetry.map(({ label, value }) => (

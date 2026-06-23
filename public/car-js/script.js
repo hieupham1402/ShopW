@@ -13,6 +13,14 @@ function changeVideo(name){
        const trailers = document.querySelectorAll('.trailer');
        const models = document.querySelectorAll('.model');
 
+const syncVideo = (video, isActive) => {
+    if (isActive) {
+        const playPromise = video.play();
+        if (playPromise && playPromise.catch) playPromise.catch(() => {});
+    } else {
+        video.pause();
+    }
+};
 
 //javascript higher order array function forEach
 //This is easier to do data mapping
@@ -21,6 +29,7 @@ bgVideoList.forEach(video => {
     if(video.classList.contains(name)){
         video.classList.add('active');
     }
+    syncVideo(video, video.classList.contains('active'));
 });
 models.forEach(model => {
     model.classList.remove('active');
@@ -35,6 +44,7 @@ trailers.forEach(video => {
     if(video.classList.contains(name)){
         video.classList.add('active');
     }
+    syncVideo(video, video.classList.contains('active'));
 });
 
 }
@@ -59,9 +69,24 @@ function pauseVideo(){
 function playVideo(){
     const bgVideoList = document.querySelectorAll('.bg-video');
     bgVideoList.forEach(video => {
-        video.play();
+        if(video.classList.contains('active')){
+            const playPromise = video.play();
+            if (playPromise && playPromise.catch) playPromise.catch(() => {});
+        }
     });
     togglePlay();
+}
+
+function syncInitialVideos(){
+    document.querySelectorAll('.bg-video, .trailer').forEach(video => {
+        video.preload = video.classList.contains('active') ? 'metadata' : 'none';
+        if(video.classList.contains('active')){
+            const playPromise = video.play();
+            if (playPromise && playPromise.catch) playPromise.catch(() => {});
+        }else{
+            video.pause();
+        }
+    });
 }
 
 function focusCarousel(direction = 'next'){
@@ -96,4 +121,6 @@ window.addEventListener('message', (event) => {
         focusCarousel('next');
     }
 });
+
+document.addEventListener('DOMContentLoaded', syncInitialVideos);
 

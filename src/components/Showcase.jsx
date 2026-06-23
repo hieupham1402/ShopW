@@ -1,9 +1,13 @@
 import {useMediaQuery} from "react-responsive";
 import {useGSAP} from "@gsap/react";
 import gsap from 'gsap';
+import {useRef} from "react";
+import useViewportVideo from "../hooks/useViewportVideo.js";
 
 const Showcase = () => {
     const isTablet = useMediaQuery({ query: '(max-width: 1024px)'});
+    const videoRef = useRef(null);
+    useViewportVideo(videoRef, { threshold: 0.1, rootMargin: "160px" });
 
     useGSAP(() => {
         if(!isTablet) {
@@ -27,7 +31,15 @@ const Showcase = () => {
     return (
         <section id="showcase">
             <div className="media">
-                <video src="/videos/Rolling.mp4" loop muted autoPlay playsInline />
+                <video
+                    ref={videoRef}
+                    src="/videos/Rolling.mp4"
+                    loop
+                    muted
+                    autoPlay
+                    playsInline
+                    preload="metadata"
+                />
                 <div className="mask">
                     <img src="/hieupm2-Photoroom.png" />
                 </div>

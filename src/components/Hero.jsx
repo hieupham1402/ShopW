@@ -1,7 +1,9 @@
 import {useEffect, useRef} from "react";
+import useViewportVideo from "../hooks/useViewportVideo.js";
 
 const Hero = () => {
     const videoRef = useRef();
+    useViewportVideo(videoRef, { threshold: 0.15, rootMargin: "160px" });
 
     useEffect(() => {
         if(videoRef.current) videoRef.current.playbackRate = 2;
@@ -21,6 +23,7 @@ const Hero = () => {
                 muted
                 loop
                 playsInline
+                preload="auto"
             />
         </section>
     )
