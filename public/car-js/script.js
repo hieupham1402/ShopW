@@ -9,18 +9,30 @@ function toggleMenu(){
 
 //Change the background video when click on the gallery images
 function changeVideo(name){
+       const banner = document.querySelector('.banner');
        const bgVideoList = document.querySelectorAll('.bg-video');
        const trailers = document.querySelectorAll('.trailer');
        const models = document.querySelectorAll('.model');
 
 const syncVideo = (video, isActive) => {
     if (isActive) {
+        video.currentTime = 0;
         const playPromise = video.play();
         if (playPromise && playPromise.catch) playPromise.catch(() => {});
     } else {
         video.pause();
     }
 };
+
+if (banner) {
+    banner.classList.remove('is-switching');
+    void banner.offsetWidth;
+    banner.classList.add('is-switching');
+    window.clearTimeout(banner._switchTimer);
+    banner._switchTimer = window.setTimeout(() => {
+        banner.classList.remove('is-switching');
+    }, 650);
+}
 
 //javascript higher order array function forEach
 //This is easier to do data mapping

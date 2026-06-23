@@ -93,7 +93,7 @@ const CarLandingSection = () => {
               <span>View strain carousel</span>
             </button>
             <button className="ghost-button" type="button" onClick={handleOpenStandalone}>
-              Launch full lounge
+           CLICK HERE TO HIGH
             </button>
           </div>
         </div>
