@@ -1,9 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+@font-face {
+    font-family: "Kush Handwritten";
+    src: url("/fonts/newfonts/Free%20Fonts/My%20Kids%20Handwritten-Basic.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    font-size: 112.5%;
 }
 
 :root {
@@ -13,7 +23,14 @@
 
 body{
     background-color:#000000;
-    font-family:'Roboto', sans-serif;
+    font-family: "Kush Handwritten", cursive;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
 }
 
 /* Header */
@@ -56,7 +73,7 @@ header ::after{
 }
 
 header .year{
-    font-family: "Racing Sans One", sans-serif;
+    font-family: "Kush Handwritten", cursive;
     font-size: 1em;
     color: #ffffff;
     letter-spacing: 1px;
@@ -233,7 +250,7 @@ header .menu.active{
 }
 
 .banner .content h1{
-    font-family: "Racing Sans One", cursive;
+    font-family: "Kush Handwritten", cursive;
     font-size: 10em;
     color: #ffffff;
     font-weight: 500;

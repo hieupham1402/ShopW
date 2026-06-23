@@ -1,23 +1,12 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "Regular";
-  src: url("/fonts/regular.otf");
-}
-
-@font-face {
-  font-family: "Medium";
-  src: url("/fonts/medium.otf");
-}
-
-@font-face {
-  font-family: "SemiBold";
-  src: url("/fonts/semibold.otf");
-}
-
-@font-face {
-  font-family: "Bold";
-  src: url("/fonts/bold.otf");
+  font-family: "Kush Handwritten";
+  src: url("/fonts/newfonts/Free%20Fonts/My%20Kids%20Handwritten-Basic.woff2")
+    format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
 }
 
 * {
@@ -35,10 +24,10 @@
 }
 
 @theme {
-  --font-regular: "Regular";
-  --font-medium: "Medium";
-  --font-semibold: "SemiBold";
-  --font-bold: "Bold";
+  --font-regular: "Kush Handwritten", cursive;
+  --font-medium: "Kush Handwritten", cursive;
+  --font-semibold: "Kush Handwritten", cursive;
+  --font-bold: "Kush Handwritten", cursive;
   --color-primary: #0071e3;
   --color-dark-100: #86868b;
   --color-dark-200: #2e2e30;
@@ -49,6 +38,7 @@ html {
   width: 100vw;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  font-size: 22px;
 }
 
 body {
@@ -57,6 +47,13 @@ body {
   background-color: #000;
   color: var(--color-dark-100);
   font-family: var(--font-semibold);
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
 }
 
 @utility flex-center {
@@ -185,7 +182,7 @@ body {
   }
 
   .immersive-stage__copy p {
-    @apply text-white/80 text-base lg:text-lg;
+    @apply text-white/80 text-lg lg:text-xl leading-relaxed;
   }
 
   .immersive-stage__chips {
@@ -193,15 +190,15 @@ body {
   }
 
   .immersive-stage__chips span {
-    @apply border border-white/20 rounded-full px-5 py-2 text-sm text-white/80 flex items-center gap-2 bg-white/5;
+    @apply border border-white/20 rounded-full px-5 py-2.5 text-base text-white/80 flex items-center gap-2 bg-white/5;
   }
 
   .immersive-stage__chips small {
-    @apply text-[0.55rem] uppercase tracking-[0.35em] text-white/60;
+    @apply text-[0.7rem] uppercase tracking-[0.3em] text-white/60;
   }
 
   .immersive-stage__list {
-    @apply list-disc list-inside text-white/70 space-y-2 text-sm lg:text-base;
+    @apply list-disc list-inside text-white/70 space-y-3 text-base lg:text-lg leading-relaxed;
   }
 
   .immersive-stage__actions {
@@ -209,11 +206,11 @@ body {
   }
 
   .immersive-stage__actions .connect-wallet-btn {
-    @apply px-6 py-3;
+    @apply px-7 py-3.5 text-base;
   }
 
   .immersive-stage__actions .ghost-button {
-    @apply px-6 py-3;
+    @apply px-7 py-3.5 text-base;
   }
 
   .immersive-stage__media {
